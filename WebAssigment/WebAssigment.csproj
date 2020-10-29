@@ -111,6 +111,7 @@
     <Content Include="Views\Shared\_navigation_footer.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\product_list.cshtml" />
+    <Content Include="Views\Test.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
