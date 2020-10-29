@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rokkitt:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link type="text/css" href="~/Content/Assests/main.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body style="margin:0">
+
+    <!-- Header -->
+    <header id="banner">
+        <div class="center">
+            <div style="padding-top: 10px;text-align:center;display:inline-block;margin-left:38%"><a class="banner link" href="#"><span class="banner_title">Everything must Go ! OFFERS up to 60% !</span></a></div>
+            <div style="float:right;display:inline-block;padding-top:10px"><span id="clear" class="material-icons close">close</span></div>
+
+            <script>
+                $(document).ready(function () {
+                    $("#clear").click(function () {
+                        $("#banner").hide(500);
+                    });
+                });
+            </script>
+
+        </div>
+    </header>
+    <!-- End of Header -->
+    <!-- Left Sidebar -->
+    <nav>
+        <div class="center">
+            <div style="text-align: center; margin: 40px 0px 20px 0px;">
+
+                <div class="search">
+
+                    <span class="material-icons" style="color:#bdbdbd">search</span>
+                </div>
+
+                <div style="display:inline-block;padding-top:5px">
+
+                    <a class="logo">Freddy</a>
+                </div>
+
+                <div style="display:inline-block;float:right">
+                    <div class="cart dropdown" style="display:inline-block;padding-top:10px;padding-right: 20px;">
+
+                        <div class=" dropdown-toggle" type="button" data-toggle="dropdown" style="color:white">
+                            <span class="material-icons" style="color:#bdbdbd">shopping_cart</span>
+                            <a style="vertical-align: super;">  2 item(s) - RM129.00</a>
+                        </div>
+
+                        <ul class="dropdown-menu dropdown-menu-right" style="width:400px">
+
+
+                            <li style="">
+                                <div style="padding: 15px;">
+                                    <img style="height: 80px;width: 80px;display:inline-block;" src="http://placehold.it/80x80" />
+
+                                    <div style="width: 160px;display:inline-block;padding-left: 10px;vertical-align: bottom;vertical-align: top;">
+
+                                        <a style="padding-bottom: 10px;display: block;">Nike - Airmax 97</a>
+                                        <a style="display: block;">Size: uk 9</a>
+
+                                    </div>
+                                    <div style="vertical-align: top;width: 25px;display:inline-block;"><a>x 1</a></div>
+                                    <div style="vertical-align: top;display:inline-block;"><a>RM4300</a></div>
+                                    <div style="float:right;display:inline-block;color: black;"><span class="material-icons cart_delete">close</span></div>
+
+                                </div>
+
+                            </li>
+
+                            <li style="">
+                                <div style="padding: 15px;">
+                                    <img style="height: 80px;width: 80px;display:inline-block;" src="http://placehold.it/80x80" />
+
+                                    <div style="width: 160px;display:inline-block;padding-left: 10px;vertical-align: bottom;vertical-align: top;">
+
+                                        <a style="padding-bottom: 10px;display: block;">Nike - Airmax 97</a>
+                                        <a style="display: block;">Size: uk 9</a>
+
+                                    </div>
+                                    <div style="vertical-align: top;width: 25px;display:inline-block;"><a>x 1</a></div>
+                                    <div style="vertical-align: top;display:inline-block;"><a>RM4300</a></div>
+                                    <div style="float:right;display:inline-block;color: black;"><span class="material-icons cart_delete">close</span></div>
+
+                                </div>
+
+                            </li>
+
+                            <li class="divider"></li>
+                            <li class="cart_summary">
+                                <div>
+                                    <a class="cart_summary_title" style="display:inline-block">Sub-Total : </a>
+                                    <a style="display:inline-block">RM400.00</a>
+                                </div>
+
+                                <div>
+                                    <a class="cart_summary_title" style="display:inline-block">Shipping Fee : </a>
+                                    <a style="display:inline-block">RM60.00</a>
+                                </div>
+
+                                <div>
+                                    <a class="cart_summary_title" style="display:inline-block">Total : </a>
+                                    <a style="display:inline-block">RM460.00</a>
+                                </div>
+                            </li>
+
+                            <li class="divider"></li>
+
+                            <li>
+                                <div>
+                                    <a class="btn cart_action">View Cart</a>
+                                    <a style="display:inline-block;font-size:14px">|</a>
+                                    <a class="btn cart_action">Checkout</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="dropdown" style="display:inline-block;    vertical-align: middle;    padding-bottom: 15px;">
+                        <div class=" dropdown-toggle" type="button" data-toggle="dropdown" style="color:white">
+                            <img style="height: 35px;width: 35px;display:inline-block;border-radius:50%" src="http://placehold.it/40x40"/>
+                            <span class="caret" style="display:inline-block;color:black"></span>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-right" ">
+
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Order & Tracking</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Sign Out</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div style="text-align: -webkit-center;">
+                <a class="nav_option link"  href="#">Mens</a>
+                <a class="nav_option link"  href="#">Womens</a>
+                <a class="nav_option link"  href="#">Trending</a>
+                <a class="nav_option link" style="margin-right:0;color:indianred"  href="#">Sales</a>
+
+            </div>
+
+        </div>
+       
+    </nav>
+    <!-- End of Left Sidebar -->
+    <!-- Content Body -->
+    <div class="content center">
+        @RenderBody()
+    </div>
+    <!-- End of Content Body -->
+    <!-- Footer -->
+    <footer>
+        <div style="margin: 20px 30px 0px 50px;">
+            <div class="center">
+                <div style="display:flex">
+
+                    <div class="footer_content">
+
+                        <a class="footer_options_title">Company</a><br />
+
+                        <a class="footer_options link">About Us</a><br>
+                        <a class="footer_options link">Cookies & Privacy</a><br>
+                        <a class="footer_options link">Terms of Use</a>
+
+                    </div>
+
+                    <div class="footer_content">
+
+                        <a class="footer_options_title">Account & Services</a><br />
+
+                        <a class="footer_options link">My Account</a><br>
+                        <a class="footer_options link">Orders & Tracking</a><br>
+                        <a class="footer_options link">Contact Us</a><br>
+                        <a class="footer_options link">Delivery & Return Policy</a>
+
+                    </div>
+
+                    <div class="footer_content" style="width:350px">
+
+                        <a class="footer_options_title">Subsribes with Us</a><br />
+
+                        <a class="footer_options" style="line-height: 20px;">Subscribe to get Exclusive Member Discount and Latest News from Us !</a><br>
+
+                    </div>
+
+
+                    <div class="footer_content" style="float:right;text-align:right;width: 500px;height: 270px;margin-right: 0;">
+
+                        <a class="footer_options_title">Our Store Location</a><br />
+
+                        <div class="mapouter" style="float:right"><div class="gmap_canvas"><iframe width="250" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=pavillion%20kuala%20lumpur&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/"></a></div>
+                        <style>
+                            .mapouter {
+                                position: relative;
+                                text-align: right;
+                                height: 200px;
+                                width: 250px;
+                            }
+
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                height: 200px;
+                                width: 250px;
+                            }
+                        </style></div>
+
+                    </div>
+
+                </div>
+
+                <hr />
+
+                <div style="margin-top: -15px;">
+                    <div style="display:inline-block;padding-top: 10px;"><span class="material-icons md-14" style="vertical-align:middle;">copyright</span><a style="vertical-align: text-top"> Freddy.INC 2020</a></div>
+                    <div style="float:right;display:inline-block;vertical-align: -webkit-baseline-middle;">
+                        <a style="">Connect with Us : </a>
+
+
+
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Style -->
+    <style>
+       
+
+
+    </style>
+</body>
+</html>
