@@ -18,5 +18,11 @@ namespace WebAssigment.Controllers
         {
             return View();
         }
+
+        public ActionResult CartKKB()
+        {
+            return View();
+        }
+
     }
 }
