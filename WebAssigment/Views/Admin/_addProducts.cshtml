@@ -86,42 +86,47 @@
                         <a class="add_products_title">Add New Image</a>
                     </div>
 
-                    <input type="file" id="support_attachment" style="display:none" name="support_attachment" accept=" .jpg, .png, .gif, .bmp, .heic">
+                    <input type="file" id="support_attachment" style="display:none" name="support_attachment" accept=" .jpg, .png, .gif">
 
                     <div class="drop_area" id="droparea">
 
-                        <div id="preview_img" class="preview_img">
-                            <img src="#" alt="Image Preview" id="image_preview_image" class="image_preview_image">
-                        </div>
-                        <div id="preview_text" style="vertical-align:middle;" class="preview_text">
+                        <div style="padding: 25px;">
+                            <div id="preview_img" class="preview_img">
+                                <img src="#" alt="Image Preview" id="image_preview_image" class="image_preview_image">
+                            </div>
+                            <div id="preview_text" style="padding-left:15px" class="preview_text">
 
-                            <div class="preview_text">
-                                <span class="imgName" id="imgName"></span>
-                                <button id="imgReset" class="remodal-close imgReset" aria-label="Close"></button>
+                                <div class="preview_text">
+                                    <span class="imgName" id="imgName"></span>
+                                    <span id="imgReset" class="material-icons imgReset">close</span>
+                                </div>
+
+
+                                <div>
+                                    <span class="imgSize" id="imgSize"></span>
+                                </div>
+
                             </div>
 
-                            <div>
-                                <span class="imgSize" id="imgSize"></span>
-                            </div>
-
+                            <span class="image_preview_text" id="image_preview_text">Drop Zone</span>
+                            <span id="filesize_hints" class="preview_format">Accepted format: JPG, JPEG, PNG or GIF. Maximum file size:  4 MB</span>
+                            <span class="text-danger errorsfont" id="error_display" style="text-align: center;"></span>
                         </div>
 
-                        <span class="image_preview_text" id="image_preview_text"><img src="https://sugarbook.com/assets/img/icons/Upload.svg">&nbsp;&nbsp;Upload Screenshot</span>
-                        <span id="filesize_hints" class="preview_format">Accepted format: JPG, JPEG, PNG or GIF. Maximum file size:  7 MB</span>
                     </div>
-                    <span class="text-danger errorsfont" id="error_display"></span>
+
                 </div>
 
             </div>
-            </div>
         </div>
-
-
-
-
-
-
     </div>
+
+
+
+
+
+
+</div>
 
 </div>
 
@@ -129,20 +134,18 @@
 
     .add_products_detail {
         background: #f7f7f7;
-        border-radius:15px;
+        border-radius: 15px;
         padding: 25px 25px 25px 25px;
         width: 100%;
     }
 
-    .add_products_title{
-
-        font-size:18px;
-       
+    .add_products_title {
+        font-size: 18px;
     }
-    .text_label{
-        font-weight:600;
-        font-size:12px;
 
+    .text_label {
+        font-weight: 600;
+        font-size: 12px;
     }
 
     .product_image {
@@ -152,4 +155,204 @@
         margin-right: 40px;
     }
 
+    .drop_area {
+        border-radius: 15px;
+        background-color: #bdbdbd;
+        height: 150px;
+    }
+
+        .drop_area:hover {
+            background-color: #9e9e9e;
+        }
+
+    .preview_img {
+        display: none;
+    }
+
+
+    .image_preview_image {
+        height: 100px;
+        width: 100px;
+    }
+
+
+    .preview_text {
+        vertical-align: top;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    .imgReset {
+        display: none;
+    }
+
+        .imgReset:hover {
+            color: black;
+        }
+
+    .image_preview_text {
+        padding-bottom: 10px;
+        margin-top: -20px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 24px;
+        display: block;
+    }
+
+    .preview_format {
+        font-family: 'Montserrat', sans-serif !important;
+        text-align: center;
+        display: block;
+        width: 300px;
+    }
+
+    .imgName {
+        vertical-align: top;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .imgSize {
+        font-size: 16px;
+    }
 </style>
+
+<script>
+
+
+
+const uploadSS = document.getElementById("support_attachment");
+const droparea = document.getElementById("droparea");
+const image_preview_image = document.getElementById("image_preview_image");
+const image_preview_text = document.getElementById("image_preview_text");
+const imgName = document.getElementById("imgName");
+const imgSize = document.getElementById("imgSize");
+const preview_img = document.getElementById("preview_img");
+const preview_text = document.getElementById("preview_text");
+const filesize_hints = document.getElementById("filesize_hints");
+const error_display = document.getElementById("error_display");
+
+$('#droparea').click(function(){ $('#support_attachment').trigger('click'); });
+
+$('#imgReset').click(function()
+{
+  $('#support_attachment').val('');
+
+  var margin_top = -20+"px";
+  image_preview_image.style.display ="none";
+  //image_preview_text.style.display ="flex";
+  filesize_hints.style.display ="table";
+  imgName.style.display="none";
+  imgSize.style.display="none";
+  imgReset.style.display="none";
+  preview_text.style.display="none";
+  error_display.style.display="none";
+
+  $('#image_preview_text').css("margin-top", margin_top);
+
+  return false;
+
+});
+
+
+uploadSS.addEventListener("change", function preview(){
+
+  const file =this.files[0];
+
+
+  var filetype = file["type"];
+   //alert(filetype);
+  //alert(['image/gif', 'image/jpeg', 'image/jpg', 'image/png'].indexOf(filetype));
+
+   var size = file.size;
+   //alert(size);
+  if(size > 400000)
+  {
+    error_display.style.display="table";
+    error_display.innerHTML = 'Please upload an image with a file size not larger than 4 MB.';
+    return false;
+
+  }else if(['image/gif', 'image/jpeg', 'image/jpg', 'image/png'].indexOf(filetype) < 0)
+  {
+    //alert("Yes");
+    error_display.style.display="table";
+    error_display.innerHTML = 'File format not supported.';
+   //alert("This is a Not Supported File's Format !");
+   return false;
+
+ }else
+ {
+
+   if(file)
+   {
+     const reader = new FileReader();
+
+     image_preview_image.style.display ="inline-block";
+     image_preview_text.style.display ="none";
+     filesize_hints.style.display ="none";
+     error_display.style.display="none";
+
+     imgName.style.display="inline-block";
+     imgSize.style.display="inline-block";
+     imgReset.style.display="inline-block";
+     preview_img.style.display="inline-block";
+     preview_text.style.display="inline-block";
+
+
+     var filesize = file.size/1024;
+
+     if(filesize >1024)
+     {
+       var new_filesize =filesize/1024;
+         var new_filesize = new_filesize.toFixed(0);
+       imgSize.innerHTML =new_filesize +"Mb";
+
+     }else
+     {
+
+     var new_filesize = filesize.toFixed(0);
+     imgSize.innerHTML =new_filesize +"Kb\n";
+
+     }
+
+     imgName.innerHTML =truncStringPortion(file.name,10,5);
+
+     reader.addEventListener("load", function(){
+       console.log(this);
+       image_preview_image.src = this.result;
+
+     });
+
+     reader.readAsDataURL(file);
+
+   }else
+   {
+
+     image_preview_image.style.display ="null";
+     image_preview_text.style.display ="null";
+     imgName.style.display="null";
+     imgSize.style.display="null";
+     imgReset.style.display="null";
+   }
+
+
+ }
+
+
+});
+
+
+function truncStringPortion(str, firstCharCount = str.length, endCharCount = 0, dotCount = 3)
+{
+	var convertedStr="";
+	convertedStr+=str.substring(0, firstCharCount);
+	convertedStr += ".".repeat(dotCount);
+	convertedStr+=str.substring(str.length-endCharCount, str.length);
+	return convertedStr;
+}
+
+
+
+
+
+
+</script>
