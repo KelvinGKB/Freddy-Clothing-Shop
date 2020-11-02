@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Admin Panel | Freddy";
+    Layout = "~/Views/Shared/_navigation_footer.cshtml";
+}
+
+
+<div style=" min-height: 500px;margin-top: 30px;display:flex;    margin-bottom: 30px;">
+
+    <div style=" min-height: 500px; width: 20%;border-right: 1px solid #8D8D8D;">
+
+        <div style="text-align:left;line-height: 32px;font-weight: 600;padding-left:30px;padding-top: 0px;"><a style="font-size: 20px">Admin Panel</a></div>
+        <hr style="width: 80%;" />
+
+ 
+
+        <div style="padding:5px;">
+            <a style="font-size:14px" href="@Url.Action("admin_panel", "Admin",new { option = "_products" })">
+                <div class="admin_panel">
+                    Customer Support
+                </div>
+            </a>
+        </div>
+
+        <div style="padding:5px;">
+            <a style="font-size:14px" href="@Url.Action("admin_panel", "Admin",new { option = "_products" })">
+                <div class="admin_panel">
+                    Products Moderation
+                </div>
+            </a>
+        </div>
+
+
+
+
+        <div style="padding:5px;">
+            <a style="font-size:14px" href="@Url.Action("admin_panel", "Admin",new { option = "_products" })">
+                <div class="admin_panel">
+                    Products
+                </div>
+            </a>
+        </div>
+
+
+        <div style="padding:5px;">
+            <a style="font-size:14px" href="@Url.Action("admin_panel", "Admin",new { option = "_products" })">
+                <div class="admin_panel">
+                    User Analytics
+                </div>
+            </a>
+        </div>
+
+        <div style="padding:5px;">
+            <a style="font-size:14px" href="@Url.Action("admin_panel", "Admin",new { option = "_products" })">
+                <div class="admin_panel">
+                    Sales Analytics
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+
+    @if (ViewBag.Option != null)
+    {
+        @RenderPage("~/Views/Admin/" + @ViewBag.Option + ".cshtml")
+    }
+
+
+
+</div>
+
+
+<style>
+    .admin_panel {
+        padding-left: 30px;
+        padding-top: 15px;
+        height: 30px;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+        .admin_panel > a {
+            font-size: 14px;
+        }
+
+        .admin_panel:hover {
+            /*background-color: #8D8D8D;*/
+        }
+</style>
+

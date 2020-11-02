@@ -1,0 +1,54 @@
+[
+  {
+    "Id": "Cat001",
+    "Name": "Hoodies & Sweatshirts"
+
+  },
+
+  {
+    "Id": "Cat002",
+    "Name": "Tops & T-Shirts"
+
+  },
+
+  {
+    "Id": "Cat003",
+    "Name": "Polos"
+  },
+
+  {
+    "Id": "Cat004",
+    "Name": "Jeans"
+  },
+
+  {
+    "Id": "Cat004",
+    "Name": "Jackets"
+  },
+
+  {
+    "Id": "Cat004",
+    "Name": "Joggers"
+  },
+
+  {
+    "Id": "Cat004",
+    "Name": "Pants"
+  },
+
+  {
+    "Id": "Cat004",
+    "Name": "Sneakers"
+  },
+
+  {
+    "Id": "Cat004",
+    "Name": "Sandals"
+  },
+
+  {
+    "Id": "Cat004",
+    "Name": "Accessories"
+  }
+
+]

@@ -1,0 +1,581 @@
+﻿
+@{
+    ViewBag.Title = "My Account | Freddy";
+    Layout = "~/Views/Shared/_navigation_footer.cshtml";
+}
+
+<div>
+
+    <div style="height: 150px; padding-top: 50px;">
+
+        <a style="font-size: 24px;">Welcome, KengBoon ! </a>
+        <div>
+            <ul class="nav nav-tabs" style=" border: 0px;padding-top: 30px;">
+                <li id ="orders_tab" class="active profile_tab"><a data-toggle="tab" href="#orders">Orders</a></li>
+                <li id ="personal_tab" class="profile_tab"><a data-toggle="tab" href="#personal_info">Personal Info</a></li>
+                <li id ="wishlist_tab" class="profile_tab"><a data-toggle="tab" href="#wishlist">Wishlist</a></li>
+            </ul>
+
+           
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div style="margin-top: 20px;">
+    <div class="tab-content" style="padding-top: 25px;">
+        <div id="orders" class="tab-pane fade in active">
+
+            <a style="font-size:24px">Recents Orders</a>
+            <hr />
+            <div style="min-height: 100px;">
+
+                <a style="font-size: 16px;">You Don't have any orders within 30 days, </a><a style="font-size: 16px;" href="#">  Shop Now.</a>
+
+                <div style="display: flex;">
+                    <div style="display:inline-block;width: 200px;">
+
+                        <div>
+                            <a class="order_details" style="font-weight:600">Order Number</a>
+                            <a class="order_details">#12345678</a>
+                            <a  class="order_details"style="font-weight:600">Date Ordered</a>
+                            <a class="order_details" style="display:block">2020-11-09</a>
+                        </div>
+
+                        <div class="profile_btn btn">
+                        <a class="profile_btn_text">Order Summary</a>
+                        </div>
+
+                    </div>
+
+                    <div style="display:inline-block;border-right: 0.5px solid #555;">
+
+
+                    </div>
+                    <div style="display:inline-block;padding: 0px 20px 20px 40px;width: 70%;">
+                        <div style=" display: flex;margin-bottom: 30px;">
+                            <div style="display:inline-block;height:100px;width:100px">
+                                <img height="100px" width="100px" src="https://picsum.photos/300/300" />
+                            </div>
+                            <div style="display:inline-block;text-align:left;margin-left:20px">
+                                <a class="product_detail_text">Alenxander McQueen Skull Shirt</a>
+                                <a class="product_detail_text">Size UK9</a>
+                                <a class="product_detail_text">RM 2990.90</a>
+                            </div>
+                        </div>
+
+                        <div style=" display: flex;">
+                            <div style="display:inline-block;height:100px;width:100px">
+                                <img height="100px" width="100px" src="https://picsum.photos/300/300" />
+                            </div>
+                            <div style="display:inline-block;text-align:left;margin-left:20px">
+                                <a class="product_detail_text">Alenxander McQueen Skull Shirt</a>
+                                <a class="product_detail_text">Size UK9</a>
+                                <a class="product_detail_text">RM 2990.90</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:inline-block;text-align:left">
+
+                        <a class="product_detail_text"style="padding-bottom:20px;font-size: 16px;">Delivered</a>
+
+                        <a class="" style="display:block;padding-bottom:5px;font-size:14px">Status Updated</a>
+                        <a class="" style="display:block;font-size:14px">2020-11-09 11:09</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <hr style="margin-bottom:70px;" />
+
+
+            <a style="font-size:24px;margin-top:10px">Recents History</a>
+            <hr/>
+            <div style="min-height: 100px;">
+
+                <a style="font-size: 16px;">You Don't have any orders within 30 days,</a><a href="#">Shop Now</a>
+
+                <div style="display: flex;">
+                    <div style="display:inline-block;width: 200px;">
+
+                        <div>
+                            <a class="order_details" style="font-weight:600">Order Number</a>
+                            <a class="order_details">#12345678</a>
+                            <a class="order_details" style="font-weight:600">Date Ordered</a>
+                            <a class="order_details" style="display:block">2020-11-09</a>
+                        </div>
+
+                        <div class="profile_btn btn">
+                            <a class="profile_btn_text">Order Summary</a>
+                        </div>
+
+                    </div>
+
+                    <div style="display:inline-block;border-right: 0.5px solid #555;">
+
+
+                    </div>
+                    <div style="display:inline-block;padding: 0px 20px 20px 40px;width: 70%;">
+                        <div style=" display: flex;margin-bottom: 30px;">
+                            <div style="display:inline-block;height:100px;width:100px">
+                                <img height="100px" width="100px" src="https://picsum.photos/300/300" />
+                            </div>
+                            <div style="display:inline-block;text-align:left;margin-left:20px">
+                                <a class="product_detail_text">Alenxander McQueen Skull Shirt</a>
+                                <a class="product_detail_text">Size UK9</a>
+                                <a class="product_detail_text">RM 2990.90</a>
+                            </div>
+                        </div>
+
+                        <div style=" display: flex;">
+                            <div style="display:inline-block;height:100px;width:100px">
+                                <img height="100px" width="100px" src="https://picsum.photos/300/300" />
+                            </div>
+                            <div style="display:inline-block;text-align:left;margin-left:20px">
+                                <a class="product_detail_text">Alenxander McQueen Skull Shirt</a>
+                                <a class="product_detail_text">Size UK9</a>
+                                <a class="product_detail_text">RM 2990.90</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:inline-block;text-align:left">
+
+                        <a class="product_detail_text" style="padding-bottom:20px;font-size: 16px;">Delivered</a>
+
+                        <a class="" style="display:block;padding-bottom:5px;font-size:14px">Status Updated</a>
+                        <a class="" style="display:block;font-size:14px">2020-11-09 11:09</a>
+                    </div>
+
+                </div>
+
+                <div class="divider2"></div>
+
+                <div style="display: flex;">
+                    <div style="display:inline-block;width: 200px;">
+
+                        <div>
+                            <a class="order_details" style="font-weight:600">Order Number</a>
+                            <a class="order_details">#12345678</a>
+                            <a class="order_details" style="font-weight:600">Date Ordered</a>
+                            <a class="order_details" style="display:block">2020-11-09</a>
+                        </div>
+
+                        <div class="profile_btn btn">
+                            <a class="profile_btn_text">Order Summary</a>
+                        </div>
+
+                    </div>
+
+                    <div style="display:inline-block;border-right: 0.5px solid #555;">
+
+
+                    </div>
+                    <div style="display:inline-block;padding: 0px 20px 20px 40px;width: 70%;">
+                        <div style=" display: flex;margin-bottom: 30px;">
+                            <div style="display:inline-block;height:100px;width:100px">
+                                <img height="100px" width="100px" src="https://picsum.photos/300/300" />
+                            </div>
+                            <div style="display:inline-block;text-align:left;margin-left:20px">
+                                <a class="product_detail_text">Alenxander McQueen Skull Shirt</a>
+                                <a class="product_detail_text">Size UK9</a>
+                                <a class="product_detail_text">RM 2990.90</a>
+                            </div>
+                        </div>
+
+                        <div style=" display: flex;">
+                            <div style="display:inline-block;height:100px;width:100px">
+                                <img height="100px" width="100px" src="https://picsum.photos/300/300" />
+                            </div>
+                            <div style="display:inline-block;text-align:left;margin-left:20px">
+                                <a class="product_detail_text">Alenxander McQueen Skull Shirt</a>
+                                <a class="product_detail_text">Size UK9</a>
+                                <a class="product_detail_text">RM 2990.90</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:inline-block;text-align:left">
+
+                        <a class="product_detail_text" style="padding-bottom:20px;font-size: 16px;">Delivered</a>
+
+                        <a class="" style="display:block;padding-bottom:5px;font-size:14px">Status Updated</a>
+                        <a class="" style="display:block;font-size:14px">2020-11-09 11:09</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <hr />
+
+
+        </div>
+        <div id="personal_info" class="tab-pane fade">
+            <a style="font-size:24px">Personal Info</a>
+            <hr />
+
+            <div style="display:flex">
+
+                <div style=" width: 80%; min-height: 100px;">
+
+                    <div style="height:120px">
+                        <img height="100px" width="100px" style="border-radius:50%" src="https://picsum.photos/150/150" />
+                    </div>
+
+                    <a class="profile_Info_title profile_info_header">Name</a>
+                    <a class="profile_Info_title">Kengboon Goh</a>
+                    <a class="profile_Info_title profile_info_header">Email</a>
+                    <a class="profile_Info_title">kengboonogoh@gmail.com</a>
+                    <a class="profile_Info_title profile_info_header">Birthday</a>
+                    <a class="profile_Info_title">2000-11-09</a>
+
+
+                </div>
+                <div>
+                    <div style="padding-top:165px">
+
+                        <div class="profile_btn btn setting_btn" style="margin-top:40px" data-toggle="modal" data-target="#personal">
+                            <a class="profile_btn_text">Edit Personal Info</a>
+                        </div>
+                        <div class="profile_btn btn setting_btn" style="margin-top:40px" data-toggle="modal" data-target="#password">
+                            <a class="profile_btn_text">Change Password</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <hr style="margin-bottom:70px;" />
+
+            <a style="font-size:24px">Addresses</a>
+            <hr />
+
+            <div style="display:flex">
+
+                <div style=" width: 80%; min-height: 100px;">
+
+
+                    <div style="padding-top:10px">
+
+                        <a class="address">KengBoon Goh</a>
+                        <a class="address">No 1,Persiaran 3 Taman Jerlun,</a>
+                        <a class="address">33000,Kuala Kangsar</a>
+                        <a class="address">Perak,Malaysia</a>
+
+                    </div>
+
+                    <div style="padding-top:5px"> <a class="btn" style=" padding-left: 0px;">Edit</a><a> | </a><a class="btn">Delete</a></div>
+
+                </div>
+                <div>
+                    <div style="padding-top:165px">
+
+                        <div class="profile_btn btn setting_btn" style="margin-bottom:20px" data-toggle="modal" data-target="#address">
+                            <a class="profile_btn_text">Add New Address</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <hr style="margin-bottom:70px;" />
+
+            <a style="font-size:24px">Payment Methods</a>
+            <hr />
+
+            <div style="display:flex">
+                <div style=" width: 80%; min-height: 100px;">
+
+
+                    <div style="padding-top:10px">
+                        <a class="profile_Info_title profile_info_header" style="font-size:18px">xxxx xxxx xxxx 1293</a>
+                        <a class="profile_Info_title profile_info_header" style="display:inline-block">Payment Type :</a>
+                        <a class="profile_Info_title" style="display:inline-block">Credit Card</a>
+
+                        <a class="profile_Info_title" style="font-size:12px">use as Default Payment Method</a>
+                    </div>
+                    <div style="padding-top:5px;padding-left: 0px;"><a class="btn" style="padding-left: 0px;">Delete</a></div>
+
+                </div>
+                <div>
+                    <div style="padding-top:165px">
+
+                        <div class="profile_btn btn setting_btn" style="margin-bottom:20px" data-toggle="modal" data-target="#payment">
+                            <a class="profile_btn_text">Add Payment Method </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <hr style="margin-bottom:70px;" />
+        </div>
+        <div id="wishlist" class="tab-pane fade">
+            <a style="font-size:24px">Wishlist</a>
+            <hr />
+            <div style="min-height:100px">
+
+                <a style="font-size: 16px;">You Don't have any orders within 30 days, </a><a style="font-size: 16px;" href="#">  Shop Now.</a>
+
+                <div style="display: flex;    padding-top: 15px;">
+                    <div style="display:inline-block;padding: 0px 20px 0px 40px;width: 90%;">
+                        <div style=" display: flex;margin-bottom: 30px;">
+                            <div style="display:inline-block;height:100px;width:100px">
+                                <img height="100px" width="100px" src="https://picsum.photos/300/300" />
+                            </div>
+                            <div style="display:inline-block;text-align:left;margin-left:20px">
+                                <a class="product_detail_text">Alenxander McQueen Skull Shirt</a>
+                                <a class="product_detail_text">Size UK9</a>
+                                <a class="product_detail_text">RM 2990.90</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+
+                        <div><span id="clear" class="material-icons close" style=" color: black;">close</span></div>
+                        <div class="profile_btn btn" style="margin-top:40px">
+                            <a class="profile_btn_text">Add to Cart</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="divider2"></div>
+            <div style="display: flex;    padding-top: 15px;">
+                <div style="display:inline-block;padding: 0px 20px 0px 40px;width: 90%;">
+                    <div style=" display: flex;margin-bottom: 30px;">
+                        <div style="display:inline-block;height:100px;width:100px">
+                            <img height="100px" width="100px" src="https://picsum.photos/300/300" />
+                        </div>
+                        <div style="display:inline-block;text-align:left;margin-left:20px">
+                            <a class="product_detail_text">Alenxander McQueen Skull Shirt</a>
+                            <a class="product_detail_text">Size UK9</a>
+                            <a class="product_detail_text">RM 2990.90</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+
+                    <div><span id="clear" class="material-icons close" style=" color: black;">close</span></div>
+                    <div class="profile_btn btn" style="margin-top:40px">
+                        <a class="profile_btn_text">Add to Cart @ViewBag.Tab</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr style="margin-bottom:70px;" />
+
+        </div>
+    </div>
+</div>
+
+<div id="personal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button type="button" class="profile_btn btn " data-dismiss="modal" style="background-color: white;width:300px"><a class="profile_btn_text">Update Personal Info</a></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="password" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button type="button" class="profile_btn btn " data-dismiss="modal" style="background-color: white;width:300px"><a class="profile_btn_text">Update Password</a></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="address" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button type="button" class="profile_btn btn " data-dismiss="modal" style="background-color: white;width:300px"><a class="profile_btn_text">Add New Address</a></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="payment" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button type="button" class="profile_btn btn " data-dismiss="modal" style="background-color: white;width:300px"><a class="profile_btn_text">Add Payment Method</a></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<style>
+
+    <style >
+    .nav-tabs > li {
+        margin-right: 40px !important;
+        width: 266px;
+        text-align: center;
+    }
+
+    .profile_tab {
+        margin-right: 40px !important;
+    }
+
+    .nav-tabs > li.active {
+        border: 0px;
+        border-bottom: 2px solid black !important;
+    }
+
+    .nav-tabs > li:hover{
+        background-color:white;
+    }
+
+
+
+        .nav-tabs > li > a {
+            
+            font-size: 18px;
+        }
+
+    .nav > li > a {
+          padding: 15px 0px 5px 0px !important;
+
+    }
+
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
+            border: 0px;
+            font-weight: 700;
+        }
+
+    .order_details {
+        display: block;
+        font-size:14px;
+        padding-bottom:10px;
+    }
+
+    .profile_btn {
+        margin-top: 10px;
+        border: 1px solid black;
+        text-align: center;
+        height: 35px;
+        width: 140px;
+    }
+
+    .profile_btn_text {
+        font-size: 14px;
+        
+    }
+
+    .product_detail_text {
+        display:block;
+        font-size:14px;
+        font-weight:600;
+        padding-bottom:10px;
+    }
+
+
+    .divider2 {
+        border-bottom: 1px solid black;
+        width: 1300px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .profile_Info_title{
+        display:block;
+        padding-bottom:10px;
+        font-size:14px;
+
+    }
+
+    .profile_info_header{
+        font-weight:600;
+        padding-top:10px;
+    }
+
+    .setting_btn {
+        display: block;
+        width: 300px;
+    }
+
+    .address{
+
+        font-weight:600;
+        display:block;
+        font-size:14px;
+
+    }
+
+</style>
+
+<script>
+
+
+     $(document).ready(function () {
+
+
+         var tab = "@ViewBag.Tab";
+
+         if (tab === "Wishlist") {
+
+             $("#orders_tab").removeClass('active');
+             $("#wishlist_tab").addClass('active');
+
+         } else if (tab === "Personal_Info"){
+
+             $("#orders_tab").removeClass('active');
+             $("#personal_tab").addClass('active');
+
+         }
+
+    });
+
+
+</script>
+

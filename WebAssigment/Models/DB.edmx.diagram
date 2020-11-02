@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7e717dcf303240fa9cd49457ca3f2dc7" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="DBModel.Account" Width="1.5" PointX="3.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Address" Width="1.5" PointX="9.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Brand" Width="1.5" PointX="2.375" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Category" Width="1.5" PointX="0.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Order" Width="1.5" PointX="8.875" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.PaymentMethod" Width="1.5" PointX="11.375" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Product" Width="1.5" PointX="3.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.ProductImage" Width="1.5" PointX="0.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.ProductOrder" Width="1.5" PointX="5.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Promo" Width="1.5" PointX="11.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.User" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Variant" Width="1.5" PointX="5.875" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Wishlist" Width="1.5" PointX="0.625" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="DBModel.FK_Account_User" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Address_User" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Product_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Product_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_ProductOrder_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_PaymentMethod_User" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_ProductImage_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_ProductOrder_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Variant_Product" ManuallyRouted="true" >
+          <ConnectorPoint PointX="4.34375" PointY="6.6436979166666674" />
+          <ConnectorPoint PointX="4.34375" PointY="8.21486490885417" />
+          <ConnectorPoint PointX="5.3696874999999995" PointY="8.21486490885417" />
+          <ConnectorPoint PointX="5.3696874999999995" PointY="8.2043773129111841" />
+          <ConnectorPoint PointX="5.875" PointY="8.2043773129111841" />
+        </AssociationConnector>
+        <AssociationConnector Association="DBModel.FK_Wishlist_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Wishlist_User" ManuallyRouted="false" ></AssociationConnector>
+        <EntityTypeShape EntityType="DBModel.Security" Width="1.5" PointX="8" PointY="1.5" />
+        <AssociationConnector Association="DBModel.FK_Security_ToTable" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

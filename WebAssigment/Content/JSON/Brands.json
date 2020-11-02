@@ -1,0 +1,49 @@
+[
+  {
+    "Id": 123,
+    "Name": "Nike"
+
+  },
+  {
+    "Id": 234,
+    "Name": "Adidas"
+  },
+  {
+    "Id": 345,
+    "Name": "Reebok"
+
+  },
+  {
+    "Id": 345,
+    "Name": "Asics"
+
+  },
+  {
+    "Id": 345,
+    "Name": "Fila"
+
+  },
+
+  {
+    "Id": 345,
+    "Name": "Puma"
+
+  },
+
+  {
+    "Id": 345,
+    "Name": "Tommy Hilfiger"
+
+  },
+  {
+    "Id": 345,
+    "Name": "Armani Exchange"
+
+  },
+  {
+    "Id": 345,
+    "Name": "Alexander McQueen"
+
+  }
+
+]

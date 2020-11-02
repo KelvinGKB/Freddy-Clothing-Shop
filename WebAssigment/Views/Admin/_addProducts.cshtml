@@ -1,0 +1,155 @@
+﻿<div style="width:80%">
+
+    <div style="padding: 0px 50px 0px 50px;">
+        <a style="font-size:24px;margin-top:10px">Add Products</a>
+        <hr />
+
+        <div style="display:flex">
+            <div style="padding-right: 20px;width: 80%;">
+                <div class="add_products_detail">
+                    <div style="margin-bottom:30px">
+                        <a class="add_products_title">Product Desciption</a>
+                    </div>
+
+                    <form>
+                        <div class="form-group">
+                            <label class="text_label" for="usr">Product Title</label>
+                            <input type="text" class="form-control" id="usr">
+                        </div>
+                        <div class="form-group">
+                            <label class="text_label" for="comment">Description</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <div style="width: 50%;">
+                <div class="add_products_detail">
+                    <div style="margin-bottom:30px">
+                        <a class="add_products_title">Organisation</a>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text_label" for="type">Product Type</label>
+                        <select class="form-control" id="type">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text_label" for="brand">Brand</label>
+                        <select class="form-control" id="brand">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div style="display:flex;margin-top:30px">
+            <div style="padding-right: 20px;width: 80%;">
+                <div class="add_products_detail">
+                    <div style="margin-bottom:30px">
+                        <a class="add_products_title">Product Image</a>
+                    </div>
+
+                    <div>
+                        <div class="product_image">
+                            <img src="https://picsum.photos/150/150" />
+                        </div>
+
+                        <div class="product_image">
+                            <img src="https://picsum.photos/150/150" />
+                        </div>
+
+                        <div class="product_image">
+                            <img src="https://picsum.photos/150/150" />
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div style="width: 50%;">
+                <div class="add_products_detail">
+                    <div style="margin-bottom:30px">
+                        <a class="add_products_title">Add New Image</a>
+                    </div>
+
+                    <input type="file" id="support_attachment" style="display:none" name="support_attachment" accept=" .jpg, .png, .gif, .bmp, .heic">
+
+                    <div class="drop_area" id="droparea">
+
+                        <div id="preview_img" class="preview_img">
+                            <img src="#" alt="Image Preview" id="image_preview_image" class="image_preview_image">
+                        </div>
+                        <div id="preview_text" style="vertical-align:middle;" class="preview_text">
+
+                            <div class="preview_text">
+                                <span class="imgName" id="imgName"></span>
+                                <button id="imgReset" class="remodal-close imgReset" aria-label="Close"></button>
+                            </div>
+
+                            <div>
+                                <span class="imgSize" id="imgSize"></span>
+                            </div>
+
+                        </div>
+
+                        <span class="image_preview_text" id="image_preview_text"><img src="https://sugarbook.com/assets/img/icons/Upload.svg">&nbsp;&nbsp;Upload Screenshot</span>
+                        <span id="filesize_hints" class="preview_format">Accepted format: JPG, JPEG, PNG or GIF. Maximum file size:  7 MB</span>
+                    </div>
+                    <span class="text-danger errorsfont" id="error_display"></span>
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+</div>
+
+<style>
+
+    .add_products_detail {
+        background: #f7f7f7;
+        border-radius:15px;
+        padding: 25px 25px 25px 25px;
+        width: 100%;
+    }
+
+    .add_products_title{
+
+        font-size:18px;
+       
+    }
+    .text_label{
+        font-weight:600;
+        font-size:12px;
+
+    }
+
+    .product_image {
+        display: inline-block;
+        height: 150px;
+        width: 150px;
+        margin-right: 40px;
+    }
+
+</style>

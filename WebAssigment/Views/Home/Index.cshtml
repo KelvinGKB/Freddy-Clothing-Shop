@@ -1,13 +1,13 @@
 ﻿
 @{
-    ViewBag.Title = "Freddy Clothing";
+    ViewBag.Title = "Freddy Clothing Shop";
     Layout = "~/Views/Shared/_navigation_footer.cshtml";
 }
 
 <div>
     <div style="height:200px;width:1440px">
 
-        <img width="1440px" height="200px" src="http://placehold.it/1440x200" />
+        <img id="banner_ads" width="1440px" height="200px" src="https://picsum.photos/300/300"" />
 
     </div>
 
@@ -43,4 +43,28 @@
     </div>
 
 </div>
+
+<script>
+
+    const arr = [
+
+        "https://picsum.photos/1400/300",
+        "https://picsum.photos/1100/300",
+        "https://picsum.photos/1200/300",
+        "https://picsum.photos/1500/300",
+
+    ];
+
+    $('#banner_ads').click(e => {
+
+        let src = arr.shift();
+        arr.push(src);
+
+        $(e.target)
+            .hide()
+            .prop('src', src)
+            .fadeIn();
+    })
+
+</script>
 

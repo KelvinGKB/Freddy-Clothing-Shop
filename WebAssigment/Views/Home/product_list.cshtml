@@ -1,10 +1,13 @@
 ﻿@{
+    ViewBag.title = @ViewBag.Department + " | Freddy";
     Layout = "~/Views/Shared/_navigation_footer.cshtml";
 }
 
+
+
 <div style=" text-align: center; padding-bottom: 50px; padding-top: 20px;">
 
-    <a style=" font-weight: 600; font-size: 36px; line-height: 60px;">Mens</a>
+    <a style=" font-weight: 600; font-size: 36px; line-height: 60px;">@ViewBag.Department</a>
 </div>
 
 <div style="float:right">
@@ -49,29 +52,19 @@
             <div id="categories_panel" style="">
 
                 <form>
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">Shirts</label>
-                    </div>
 
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">T-Shirts</label>
-                    </div>
+                    
 
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">Pants</label>
-                    </div>
+                    @foreach (var c in ViewBag.CatList)
+                    {
+                        <div class="checkbox">
+                            <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">@c.Name</label>
+                        </div>
+                    }
 
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">Hoddies</label>
-                    </div>
 
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">Sneakers</label>
-                    </div>
 
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">Accessories</label>
-                    </div>
+
 
 
                 </form>
@@ -91,32 +84,15 @@
             </div>
 
             <div id="brands_panel" style="">
-
+               
                 <form>
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">Adidas</label>
-                    </div>
+                    @foreach (var b in ViewBag.BrandList)
+                    {
 
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">Nike</label>
-                    </div>
-
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">New Balance</label>
-                    </div>
-
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">Reebok</label>
-                    </div>
-
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">Birkenstock</label>
-                    </div>
-
-                    <div class="checkbox">
-                        <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">Tommu Hilfiger</label>
-                    </div>
-
+                        <div class="checkbox">
+                            <label style="font-size:16px;padding-bottom: 5px;"><input type="checkbox" value="">@b.Name</label>
+                        </div>
+                    }
 
                 </form>
 
@@ -195,18 +171,20 @@
 
 <div style="padding: 35px 0px 100px 50px;width: 1060px;overflow:auto">
 
+    <a href="@Url.Action("product_detail", "Home")">
+        <div class="product_list">
 
-    <div class="product_list">
+            <img width="250px" height="250px" src="http://placehold.it/250x250" />
 
-        <img width="250px" height="250px" src="http://placehold.it/250x250" />
+            <div style="text-align:center;width:250px">
+                <a class="product_list_title">Nike- Airmax 97 Grey</a>
+                <a style="font-size:14px">RM990</a>
 
-        <div style="text-align:center;width:250px">
-            <a class="product_list_title">Nike- Airmax 97 Grey</a>
-            <a style="font-size:14px">RM990</a>
+            </div>
 
         </div>
 
-    </div>
+    </a>
 
     <div class="product_list">
 

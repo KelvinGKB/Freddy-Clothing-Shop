@@ -1,0 +1,228 @@
+﻿
+@{
+    ViewBag.Title = "Nike Airmax 97 White | Freddy";
+    Layout = "~/Views/Shared/_navigation_footer.cshtml";
+}
+
+<div>
+    <div class="preview_img">
+
+        <div class="preview_img_large">
+            <img id="preview_large" height="350px" width="350px" src="https://picsum.photos/350/350" />
+        </div>
+
+        <div style="width: 350px; margin: auto; margin-top: 25px;min-height: 100px;">
+            <div  class="preview_img_small">
+                <img  id="preview1" class="img_select" height="100px" width="100px" src="https://picsum.photos/200/300" />
+            </div>
+            <div class="preview_img_small">
+                <img id="preview2" height="100px" width="100px" src="https://picsum.photos/100/300" />
+            </div>
+            <div class="preview_img_small" style="margin-right: 0px;">
+                <img id="preview3" height="100px" width="100px" src="https://picsum.photos/300/300" />
+            </div>
+
+        </div>
+
+        <script>
+            $("#preview1").click(function () {
+                $("#preview1").toggleClass("img_select");
+                $("#preview2").removeClass('img_select');   
+                $("#preview3").removeClass('img_select');  
+
+                var img = this.src;
+
+                $("#preview_large").attr('src', img);
+               
+
+            })
+
+            $("#preview2").click(function () {
+                $("#preview2").toggleClass("img_select");
+                $("#preview1").removeClass('img_select');
+                $("#preview3").removeClass('img_select'); 
+
+                var img = this.src;
+
+                $("#preview_large").attr('src', img);
+
+            })
+
+            $("#preview3").click(function () {
+                $("#preview3").toggleClass("img_select");
+                $("#preview1").removeClass('img_select');
+                $("#preview2").removeClass('img_select');   
+
+                var img = this.src;
+
+                $("#preview_large").attr('src', img);
+            })
+
+           
+        </script>
+        
+
+
+    </div>
+
+    <div style=" padding:70px 0px 80px 0px;width: 800px;overflow:auto">
+
+        <div style="text-align:center">
+            <a style="display:block;font-weight: 600;font-size: 24px;line-height:80px">ALEXANDER MCQUEEN SKULL BADGE CREW SWEAT</a>
+            <a style="display:block;font-size:14px">BLACK</a>
+            <a style="display:block;line-height: 80px;font-weight: 600;font-size: 18px;">RM990</a>
+        </div>
+
+        <div class="dropdown " style="padding-left: 35%;margin-top: 50px">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="width: 250px; text-align: center;">
+                Size
+                <span class="caret" style="margin: 8px 0px 0px 5px;float:right"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-left" style="margin-left: 35%; width: 250px;">
+                <li disabled><a class="sort_list" href="#">UK6</a></li>
+                <li><a class="sort_list" href="#">UK 7</a></li>
+                <li><a class="sort_list" href="#">UK 8</a></li>
+                <li><a class="sort_list" href="#">UK 9</a></li>
+                <li><a class="sort_list" href="#">UK 10</a></li>
+            </ul>
+        </div>
+
+        <div style="text-align: center;margin-top: 30px;margin-bottom:10px">
+
+            <a>Estimated date to receive 6 October - 10 October</a>
+
+        </div>
+        <div class="btn product_btn" style="background-color:black;">
+
+            <a style=" font-size: 14px; color: white;">ADD TO CART</a>
+
+        </div>
+        <div class="btn product_btn" style="background-color:#f6f6f6;margin-top: 20px;">
+
+            <a style="font-size: 14px;">ADD TO WISHLIST</a>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+            <ul class="nav nav-tabs" style=" border: 0px;">
+                <li class="active"><a data-toggle="tab" href="#description">Description</a></li>
+                <li><a data-toggle="tab" href="#shipping">Shipping & Delivery</a></li>
+                <li><a data-toggle="tab" href="#return">Return Policy</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="description" class="tab-pane fade in active">
+                    <h3>HOME</h3>
+                    <p class="product_tab_content">
+                        If for some reason you are not happy with your purchase
+                        you can return it to us within 14 days for an exchange or refund.
+                        If for some reason you are not happy with your purchase
+                        you can return it to us within 14 days for an exchange or refund.
+                        If for some reason you are not happy with your purchase
+                        you can return it to us within 14 days for an exchange or refund.
+                    </p>
+                </div>
+                <div id="shipping" class="tab-pane fade">
+                    <p class="product_tab_content">
+                        Shipping Fee :<br /><br />
+
+                        West Malaysia : RM40.00<br />
+                        East Malaysia  : RM60.00<br />
+                        <br />
+                        Free Shipping when Purchase over RM150.00<br />
+
+
+                    </p>
+                </div>
+                <div id="return" class="tab-pane fade">
+                    <p class="product_tab_content">
+                        If for some reason you are not happy with your purchase 
+                        you can return it to us within 14 days for an exchange or refund.
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <style>
+            .nav-tabs > li {
+                width: 266px;
+                text-align: center;
+            }
+            .nav-tabs > li.active {
+                border: 0px;
+                border-bottom: 2px solid black !important;
+            }
+
+            .nav-tabs{
+                background-color:white;
+            }
+
+            .nav-tabs > li.active > a , 
+            .nav-tabs > li.active > a:focus {
+                    border: 0px;
+            }
+
+               .product_tab_content {
+                    padding-top: 30px;
+                }
+
+            .preview_img_small {
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+            .preview_img_large {
+                margin: auto;
+                width: 350px;
+                height: 350px;
+                margin-top: 28px;
+            }
+
+            .preview_img_large:hover {
+
+                background-color:black;
+               
+            }
+            .preview_img_small:hover {
+
+                background-color:#FAFAFA
+               
+            }
+
+            .preview_img {
+                float: left;
+                width: 500px;
+                height: 500px;
+                border-right: 0px solid #8D8D8D;
+                margin: 70px 30px 0px 50px;
+            }
+
+            .product_btn {
+                display: block;
+                width: 250px;
+                height: 40px;
+                margin: auto;
+                text-align: center;
+                line-height: 35px;
+            }
+
+            .img_select {
+                border: 1px solid black;
+            }
+
+            
+            
+
+
+        </style>
+
+
+    </div>
+
+
+</div>
+

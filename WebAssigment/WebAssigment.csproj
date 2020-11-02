@@ -43,7 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -88,29 +96,119 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DB.mdf" />
+    <Content Include="App_Data\DB_log.ldf">
+      <DependentUpon>DB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\Assests\icon\close_white.svg" />
     <Content Include="Content\Assests\icon\close_black.svg" />
     <Content Include="Content\Assests\icon\facebook.png" />
     <Content Include="Content\Assests\icon\instagram.png" />
     <Content Include="Content\Assests\icon\search.svg" />
     <Content Include="Content\Assests\icon\cart.svg" />
+    <Content Include="Content\Assests\main.css" />
     <Content Include="Global.asax" />
+    <Content Include="Models\DB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DB.Context.cs</LastGenOutput>
+      <DependentUpon>DB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\DB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB.edmx</DependentUpon>
+      <LastGenOutput>DB.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Address.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Brand.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Brands.cs" />
+    <Compile Include="Models\Categories.cs" />
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PaymentMethod.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductImage.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductOrder.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Promo.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Security.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Variant.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Wishlist.cs">
+      <DependentUpon>DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Content\JSON\Brands.json" />
+    <Content Include="Content\JSON\Categories.json" />
+    <EntityDeploy Include="Models\DB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DB.edmx.diagram">
+      <DependentUpon>DB.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Views\Shared\_navigation_footer.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\product_list.cshtml" />
+    <Content Include="Views\Home\product_detail.cshtml" />
+    <Content Include="Views\User\user_profile.cshtml" />
+    <Content Include="Views\Admin\admin_panel.cshtml" />
+    <Content Include="Views\Admin\_products.cshtml" />
+    <Content Include="Views\Admin\_addProducts.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -119,9 +217,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\Assests\img\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
