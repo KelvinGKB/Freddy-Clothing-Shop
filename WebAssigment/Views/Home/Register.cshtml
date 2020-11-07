@@ -1,0 +1,56 @@
+﻿@model User
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_navigation_footer.cshtml";
+    var ao = new AjaxOptions
+    {
+        Url = "/Home/Register",
+        HttpMethod = "post",
+        LoadingElementId = "loader",
+        OnBegin = "loading",
+        OnSuccess="result(data)"
+    };
+}
+
+<h2 class="text-center">Register</h2>
+
+@using (Ajax.BeginForm(ao))
+{
+    <div class="form-group">
+        @Html.LabelFor(u => u.Username)
+        @Html.TextBoxFor(u => u.Username, new { @class = "form-control", autofocus = "" })
+        @Html.ValidationMessageFor(u => u.Username, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.Password)
+        @Html.TextBoxFor(u => u.Password, new { @class = "form-control", type = "password" })
+        @Html.ValidationMessageFor(u => u.Password, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.Email)
+        @Html.TextBoxFor(u => u.Email, new { @class = "form-control", type = "email" })
+        @Html.ValidationMessageFor(u => u.Email, "", new { @class = "text-danger" })
+    </div>
+    <button data-loading id="register_btn" type="submit" class="btn btn-primary">Register</button>
+    <img src="~/Content/Assests/icon/91.gif" id="loader" style="display:none" />
+}
+
+@section foot{
+    <script>
+
+        function result(data) {
+            console.log('test');
+            if (data.result) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Register Successfully'
+
+                }).then((result) => {
+                    location = 'Index';
+                });
+            } else {
+                closeLoading();
+            }
+        }
+    </script>
+    }

@@ -9,15 +9,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-   
+
 
     <link type="text/css" href="~/Content/Assests/main.css" rel="stylesheet" />
-
 
 
 
@@ -32,13 +30,7 @@
             <div style="padding-top: 10px;text-align:center;display:inline-block;margin-left:38%"><a class="banner link" href="#"><span class="banner_title">Everything must Go ! OFFERS up to 60% !</span></a></div>
             <div style="float:right;display:inline-block;padding-top:10px"><span id="clear" class="material-icons close">close</span></div>
 
-            <script>
-                $(document).ready(function () {
-                    $("#clear").click(function () {
-                        $("#banner").hide(500);
-                    });
-                });
-            </script>
+
 
         </div>
     </header>
@@ -137,11 +129,12 @@
                     </div>
 
                     <div class="dropdown" style="display:inline-block;    vertical-align: middle;    padding-bottom: 15px;">
-                        <div class=" dropdown-toggle" type="button" data-toggle="dropdown" style="color:white">
-                            <img style="height: 35px;width: 35px;display:inline-block;border-radius:50%" src="http://placehold.it/40x40"/>
+                        <div class="dropdown-toggle" data-toggle="dropdown" style="color:white">
+                            <img style="height: 35px;width: 35px;display:inline-block;border-radius:50%" src="http://placehold.it/40x40" />
                             <span class="caret" style="display:inline-block;color:black"></span>
                         </div>
-                        <ul class="dropdown-menu dropdown-menu-right" ">
+
+                        <ul class="dropdown-menu dropdown-menu-right">
 
                             <li><a href="@Url.Action("admin_panel", "Admin",new { option = "_products" })">My Account</a></li>
                             <li><a href="@Url.Action("user_profile", "User",new { tab = "Orders" })">Order & Tracking</a></li>
@@ -155,19 +148,18 @@
                 </div>
 
 
-
             </div>
 
-            <div style="text-align: -webkit-center;">
-                <a class="nav_option link"  href="@Url.Action("product_list", "Home",new { department = "Mens" })">Mens</a>
-                <a class="nav_option link"  href="@Url.Action("product_list", "Home",new { department = "Womens" })">Womens</a>
-                <a class="nav_option link"  href="@Url.Action("product_list", "Home",new { department = "Trending" })">Trending</a>
-                <a class="nav_option link" style="margin-right:0;color:indianred"  href="@Url.Action("product_list", "Home",new { department = "Sales" })">Sales</a>
+            <div style="text-align:center;">
+                <a class="nav_option link" href="@Url.Action("product_list", "Home",new { department = "Mens" })">Mens</a>
+                <a class="nav_option link" href="@Url.Action("product_list", "Home",new { department = "Womens" })">Womens</a>
+                <a class="nav_option link" href="@Url.Action("product_list", "Home",new { department = "Trending" })">Trending</a>
+                <a class="nav_option link" style="margin-right:0;color:indianred" href="@Url.Action("product_list", "Home",new { department = "Sales" })">Sales</a>
 
             </div>
 
         </div>
-       
+
     </nav>
     <!-- End of Left Sidebar -->
     <!-- Content Body -->
@@ -215,22 +207,24 @@
 
                         <a class="footer_options_title">Our Store Location</a><br />
 
-                        <div class="mapouter" style="float:right"><div class="gmap_canvas"><iframe width="250" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=pavillion%20kuala%20lumpur&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/"></a></div>
-                        <style>
-                            .mapouter {
-                                position: relative;
-                                text-align: right;
-                                height: 200px;
-                                width: 250px;
-                            }
+                        <div class="mapouter" style="float:right">
+                            <div class="gmap_canvas"><iframe width="250" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=pavillion%20kuala%20lumpur&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/"></a></div>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 200px;
+                                    width: 250px;
+                                }
 
-                            .gmap_canvas {
-                                overflow: hidden;
-                                background: none !important;
-                                height: 200px;
-                                width: 250px;
-                            }
-                        </style></div>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 200px;
+                                    width: 250px;
+                                }
+                            </style>
+                        </div>
 
                     </div>
 
@@ -258,11 +252,16 @@
         </div>
     </footer>
 
-    <!-- Style -->
-    <style>
-       
 
 
-    </style>
+    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="~/Scripts/app.js"></script>
+
+    @RenderSection("foot", false)
 </body>
 </html>

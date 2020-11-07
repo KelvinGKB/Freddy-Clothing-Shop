@@ -30,7 +30,7 @@ namespace WebAssigment.Models
         public string Email { get; set; }
         public string ProfileURL { get; set; }
         public Nullable<int> ContactNo { get; set; }
-        public System.DateTime BirthDate { get; set; }
+        public Nullable<System.DateTime> BirthDate { get; set; }
         public string Gender { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
